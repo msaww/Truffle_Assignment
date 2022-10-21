@@ -71,4 +71,6 @@ This section puts focus on writing unit tests for the smart contract.
   });
   ```
 
-### Part 4
+### Section 4
+
+- This section discusses deploying a smart contract using methods like hardhat and chainstack node.
