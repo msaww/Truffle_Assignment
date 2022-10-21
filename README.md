@@ -8,14 +8,24 @@ Section 4 : [Further deployement](https://youtu.be/roHoOZXIxYs)
 
 
 ### Section 1
-Installing the requirements required to launch and execute a Truffle smart contract is covered in Section 1 of the tutorial:
-- NodeJS
-- Truffle
-   `` npm install truffle -g ``
+-Installing the requirements required to launch and execute a Truffle smart contract is covered in Section 1 of the tutorial:
+NodeJS & Truffle
+   ``` npm install truffle -g ```
+
+-To initialize the contract we use   ``` truffle init ``` command.
+Once the folders are created, the contract folder includes all of our smart contracts, the migration folder contains the deployment suites, the test folder includes the test suites.
+Migration.sol contract is built by Truffle to keep track of which contracts were deployed in last migration and which will run further.
+
+-First, we create a new simple smart contract 'Helloworld.sol'.
 
 
-### Part 2
-Part 2 involves the creation of a simple smart contract called HelloWorld.
+
+
+
+
+
+
+
 - This contract has a constructor which is used to initialize a string:
    ```
    constructor(string memory _message) {
