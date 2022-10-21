@@ -11,7 +11,7 @@ Section 4 : [Further deployement](https://youtu.be/roHoOZXIxYs)
 Installing the requirements required to launch and execute a Truffle smart contract is covered in Section 1 of the tutorial:
 - NodeJS
 - Truffle
-   ``` npm install truffle -g ```
+   `` npm install truffle -g ``
 
 
 ### Part 2
