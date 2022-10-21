@@ -16,7 +16,26 @@ NodeJS & Truffle
 Once the folders are created, the contract folder includes all of our smart contracts, the migration folder contains the deployment suites, the test folder includes the test suites.
 Migration.sol contract is built by Truffle to keep track of which contracts were deployed in last migration and which will run further.
 
--First, we create a new simple smart contract 'Helloworld.sol'.
+-We first start with creating a new simple smart contract 'Helloworld.sol'.
+To compile : ``` truffle comile ```
+
+
+### Section 2
+-For migration, we create '2_hello_world_migration'.
+To migrate : ``` truffle migrate ```
+To connect to loacl instance, run develop command first and then run trufffle migrate.
+To deploy  : ``` truffle deploy ```
+
+-We now create a advanced migration scripts and some scenarios we run into while deploying contracts and work with constructors.
+-We add a constructor to Helloworld to initialize a string:
+ ```
+   constructor(string memory _message) {
+       message = _message;
+       owner = msg.sender;
+   }
+   ```
+
+
 
 
 
