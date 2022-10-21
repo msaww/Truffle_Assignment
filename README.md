@@ -13,17 +13,17 @@ NodeJS & Truffle
    ``` npm install truffle -g ```
 
 -To initialize the contract we use   ``` truffle init ``` command.
-Once the folders are created, the contract folder includes all of our smart contracts, the migration folder contains the deployment suites, the test folder includes the test suites.
+Once the folders are created, the contract folder includes all of our smart contracts, the migration folder contains the deployment suites, the test folder includes the test suites.<br \>
 Migration.sol contract is built by Truffle to keep track of which contracts were deployed in last migration and which will run further.
 
--We first start with creating a new simple smart contract 'Helloworld.sol'.
+-We first start with creating a new simple smart contract 'Helloworld.sol'.<br \>
 To compile : ``` truffle comile ```
 
 
 ### Section 2
--For migration, we create '2_hello_world_migration'.
-To migrate : ``` truffle migrate ```
-To connect to loacl instance, run develop command first and then run trufffle migrate.
+-For migration, we create '2_hello_world_migration'.<br \>
+To migrate : ``` truffle migrate ```<br \>
+To connect to loacl instance, run develop command first and then run trufffle migrate.<br \>
 To deploy  : ``` truffle deploy ```
 
 -We now create a advanced migration scripts and some scenarios we run into while deploying contracts and work with constructors.
@@ -34,31 +34,13 @@ To deploy  : ``` truffle deploy ```
        owner = msg.sender;
    }
    ```
-
-
-
-
-
-
-
-
-
-
-
-- This contract has a constructor which is used to initialize a string:
-   ```
-   constructor(string memory _message) {
-       message = _message;
-       owner = msg.sender;
-   }
-   ```
-- The function *hello* returns the string initialized by the constructor:
+- The function 'hello' in Helloworld returns the string initialized by the constructor:
   ```
   function hello() public view returns (string memory) {
       return message;
   }
   ```
-- Finally, the function *setMessage* allows the user to change the value of the string:
+- Lastly, the function 'setMessage' allows the user to change the value of the string:
   ```
   function setMessage(string memory _message) public payable {
       require(msg.value >= 1 ether);
@@ -66,10 +48,13 @@ To deploy  : ``` truffle deploy ```
       message = _message;
   }
   ```
+-We use ``` let instance = await Helloworld.deployed() ``` and then ```instance.message()``` to get the output
 
-### Part 3
-This part of the tutorial is focussed on writing unit tests for the smart contract.
-- The first test checks if the *setMessage* function set the value of the string correctly:
+-Further also different deployement methods using constructors are discussed.
+
+### Section 3
+This section puts focus on writing unit tests for the smart contract.
+- First, we confirm that the string's value was appropriately set using the'setMessage' function:
   ```
   it("constructor should set the message correctly", async () => {
       let instance = await HelloWorld.deployed();
@@ -77,7 +62,7 @@ This part of the tutorial is focussed on writing unit tests for the smart contra
       assert.equal(message, "Hello World constructor");
   });
   ```
-- The second test ensures that the owner's address is equal to the first value of the accounts array:
+- Second, we make sure that the owner's address corresponds to the account's array's initial value:
   ```
   it("owner should be accounts[0]", async () => {
       let instance = await HelloWorld.deployed();
