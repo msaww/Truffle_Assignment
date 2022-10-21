@@ -7,11 +7,12 @@ Section 3 : [Testing](https://youtu.be/YKJkcg_ycpM)<br />
 Section 4 : [Further deployement](https://youtu.be/roHoOZXIxYs)
 
 
-### Part 1
-Part 1 of the tutorial involves installing the prerequisites needed to run and deploy a Truffle smart contract:
+### Section 1
+Installing the requirements required to launch and execute a Truffle smart contract is covered in Section 1 of the tutorial:
 - NodeJS
 - Truffle
-- Ganache
+   ``` npm install truffle -g ```
+
 
 ### Part 2
 Part 2 involves the creation of a simple smart contract called HelloWorld.
