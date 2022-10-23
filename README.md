@@ -75,3 +75,8 @@ This section puts focus on writing unit tests for the smart contract.
 
 - This section discusses deploying a smart contract using methods like hardhat and chainstack node.
 - We consider the hardhat method, please find the Hardhat/Hardhat_SessionScript attached to refer to the deployement which includes all steps.
+- To run the given repo for Hardhat, we will need to install hardhat using hte command 
+```
+npm init
+npm install --save-dev hardhat
+```
