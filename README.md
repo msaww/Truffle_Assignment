@@ -74,4 +74,4 @@ This section puts focus on writing unit tests for the smart contract.
 ### Section 4
 
 - This section discusses deploying a smart contract using methods like hardhat and chainstack node.
-- We consider the hardhat method, please find the Hardhat_SessionScript attached to refer to the deployement which includes all steps.
+- We consider the hardhat method, please find the Hardhat/Hardhat_SessionScript attached to refer to the deployement which includes all steps.
