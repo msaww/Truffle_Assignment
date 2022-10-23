@@ -4,7 +4,7 @@ This repository provides the code and understanding necessary to begin using Tru
 Section 1 : [Installation & Contract Creation](https://youtu.be/ZaqAwOzEiQ8)<br />
 Section 2 : [Migration & Deployement](https://youtu.be/TDDuLlOiYJ8)<br />
 Section 3 : [Testing](https://youtu.be/YKJkcg_ycpM)<br />
-Section 4 : [Further deployement](https://youtu.be/roHoOZXIxYs)
+Section 4 : [Further deployement using Hardhat](https://youtu.be/roHoOZXIxYs)
 
 
 ### Section 1
@@ -16,7 +16,7 @@ NodeJS & Truffle
 Once the folders are created, the contract folder includes all of our smart contracts, the migration folder contains the deployment suites, the test folder includes the test suites.<br \>
 Migration.sol contract is built by Truffle to keep track of which contracts were deployed in last migration and which will run further.
 
--We first start with creating a new simple smart contract 'Helloworld.sol'.<br \>
+-We first start with creating a new simple smart contract 'HelloWorld.sol'.<br \>
 To compile : ``` truffle comile ```
 
 
@@ -27,14 +27,14 @@ To connect to loacl instance, run develop command first and then run trufffle mi
 To deploy  : ``` truffle deploy ```
 
 -We now create a advanced migration scripts and some scenarios we run into while deploying contracts and work with constructors.
--We add a constructor to Helloworld to initialize a string:
+-We add a constructor to HelloWorld to initialize a string:
  ```
    constructor(string memory _message) {
        message = _message;
        owner = msg.sender;
    }
    ```
-- The function 'hello' in Helloworld returns the string initialized by the constructor:
+- The function 'hello' in HelloWorld returns the string initialized by the constructor:
   ```
   function hello() public view returns (string memory) {
       return message;
@@ -48,7 +48,7 @@ To deploy  : ``` truffle deploy ```
       message = _message;
   }
   ```
--We use ``` let instance = await Helloworld.deployed() ``` and then ```instance.message()``` to get the output
+-We use ``` let instance = await HelloWorld.deployed() ``` and then ```instance.message()``` to get the output
 
 -Further also different deployement methods using constructors are discussed.
 
@@ -74,3 +74,4 @@ This section puts focus on writing unit tests for the smart contract.
 ### Section 4
 
 - This section discusses deploying a smart contract using methods like hardhat and chainstack node.
+- We consider the hardhat method, please find the Hardhat_SessionScript attached to refer to the deployement which includes all steps.
